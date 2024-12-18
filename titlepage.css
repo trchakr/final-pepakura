@@ -84,7 +84,7 @@ div.example {
 
 /* background image setup */
 .bg {
-    background-image: url('images/untitled-1.png'); /* default image */
+    background-image: url('images/Untitled-1.png'); /* default image */
     background-size: contain; /* maintains image proportions */
     background-position: center; /* centers image */
     background-repeat: no-repeat; /* prevents tiling */
@@ -98,7 +98,7 @@ div.example {
 /* responsive adjustments for smaller screens */
 @media (max-width: 576px) { 
     .bg {
-        background-image: url('images/untitled-2.png'); /* mobile-optimized image */
+        background-image: url('images/Untitled-2.png'); /* mobile-optimized image */
         background-size: cover; /* ensures full coverage */
     }
 }
