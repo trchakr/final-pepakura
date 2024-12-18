@@ -84,7 +84,7 @@ div.example {
 
 /* background image setup */
 .bg {
-    background-image: url('images/Untitled-1.png'); /* default image */
+    background-image: url('../images/Untitled-1.png'); /* default image */
     background-size: contain; /* maintains image proportions */
     background-position: center; /* centers image */
     background-repeat: no-repeat; /* prevents tiling */
