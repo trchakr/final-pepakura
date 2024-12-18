@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- linking the main stylesheet for title page styling -->
+        <link rel="stylesheet" href="titlepage.css">
+
+        <!-- setting the title of the page -->
+        <title>Home - Pepakura Paper Crafts 101</title>
+
+        <!-- favicon for the browser tab -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+        <!-- meta tags for proper display on all devices -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- bootstrap for layout and styles -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- icons from bootstrap for buttons or nav -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+        <!-- fonts used in the site -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+        <!-- oops duplicated preconnects here but it still works -->
+        <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+      </head>
+<body>
+
+<!-- placeholder for navbar that gets added with JS -->
+<div id="navbar-placeholder"></div>
+
+<div>
+<!-- title section with background and button -->
+<div class="bg d-flex align-items-center justify-content-center">
+    <div class="jumbotron text-center p-4">
+        <!-- logo image -->
+        <img src="images/titlenavbar.png" alt="Avatar Logo" class="title-image img-fluid"> 
+
+        <!-- catchy subtitle for the title section -->
+        <h2 class="roboto-light">The all-in-one guide to make your own custom paper crafts!</h2>
+
+        <!-- button to start the guide -->
+        <button onclick="window.location.href = 's1overview.html';" class="button roboto">Start Now!</button>
+    </div>
+</div>
+
+<!-- section explaining what pepakura is -->
+<section class="papercrafts-info">
+  <h2 class="section-title gluten">WHAT ARE PEPAKURA PAPER CRAFTS?</h2>
+  <div class="info-container">
+      <!-- image and text blocks to explain the concept -->
+      <div class="info-item">
+          <img src="images/raccoon.jpg" alt="Raccoon Paper Craft" class="info-image2" >
+      </div> 
+      <div class="info-item">
+          <p class="info-text">
+              Pepakura is a Japanese term that refers to the art of creating intricate 3D models out of paper. By assembling templates, you can construct stunning detailed sculptures ranging from animals to characters and architecture.
+          </p>
+      </div>
+      <div class="info-item">
+          <img src="images/temple3d.jpg" alt="Temple Paper Craft" class="info-image" >
+      </div>
+      <div class="info-item">
+          <img src="images/gingerhouse.jpg" alt="Ginger House Paper Craft" class="info-image2" >
+      </div>
+      <div class="info-item">
+          <p class="info-text">
+              Websites like Canon Creative Park have made Pepakura more accessible worldwide by offering free templates and instructions, opening this Japanese craft to a broader audience.
+          </p>
+      </div>
+      <div class="info-item">
+          <img src="images/panda3d.jpg" alt="Panda Paper Craft" class="info-image" >
+      </div>
+  </div>
+</section>
+
+<!-- section about creating your own templates -->
+<section class="final-section">
+  <div class="container">
+      <h2 class="section-title gluten">How to Make Your Own Template?</h2>
+      <div class="blue-box">
+          <div class="content-wrapper">
+              <!-- adding decorative icons -->
+              <div class="left-icon">
+                  <img src="images/archicon.png" alt="Left Icon" />
+              </div>
+              <div class="text-content">
+                  <!-- simple guide text with a call-to-action button -->
+                  <h3 class="ready-title roboto">Ready to begin?</h3>
+                  <p class="roboto">No single app does it all, but this guide helps you navigate three tools to start creating your own designs.</p>
+                  <button class="button roboto" onclick="window.location.href='s1overview.html'">Start Now!</button>
+              </div>
+              <div class="right-icon">
+                  <img src="images/buildingicon.png" alt="Right Icon" />
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+</div>
+
+<!-- placeholder for footer added dynamically -->
+<div id="footer-placeholder"></div>
+
+<!-- bootstrap script for responsive behavior -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- common.js contains shared functions -->
+<script src="common.js"></script> 
+</body>
+</html>

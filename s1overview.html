@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- linking to my custom css for styling -->
+        <link rel="stylesheet" href="mystyle.css">
+
+        <title>Step-By-Step - Pepakura Paper Crafts 101</title>
+
+        <!-- setting the favicon for the tab -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- bootstrap css for easy styling and responsiveness -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- icons from bootstrap icons library -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        
+        <!-- connecting to google fonts for typography -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+        
+        <!-- adding multiple font styles because... why not -->
+        <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+      </head>
+<body>
+
+<!-- navbar-placeholder: dynamically loaded -->
+<div id="navbar-placeholder"></div>
+
+<!-- sidebar for mobile navigation (dropdown menu) -->
+<div class="mobile-nav d-md-none mb-3">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Overview
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <!-- links to all steps -->
+            <li><a class="dropdown-item" href="s1overview.html">Overview</a></li>
+            <li><a class="dropdown-item" href="s2tools.html">Tools & Software</a></li>
+            <li><a class="dropdown-item" href="s5sketchup.html">Set Up SketchUp</a></li>
+            <li><a class="dropdown-item" href="s4pepakura.html">Set Up Pepakura</a></li>
+            <li><a class="dropdown-item" href="s5gimp.html">Set Up GIMP</a></li>
+            <li><a class="dropdown-item" href="s7basics.html">SketchUp Basics</a></li>
+            <li><a class="dropdown-item" href="s6design.html">Design Your Model</a></li>
+            <li><a class="dropdown-item" href="s9exportsketch.html">Export from SketchUp</a></li>
+            <li><a class="dropdown-item" href="s10unfold.html">Unfold in Pepakura</a></li>
+            <li><a class="dropdown-item" href="s11export.html">Export as PDF</a></li>
+            <li><a class="dropdown-item" href="s12decorate.html">Decorate in GIMP</a></li>
+            <li><a class="dropdown-item" href="s14print.html">Print</a></li>
+            <li><a class="dropdown-item" href="s15cut.html">Cut, Fold, Assemble</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="main-content">
+    <!-- desktop sidebar with the full list of steps -->
+    <div class="sidebar d-none d-md-block">
+        <h4 class="stepbystep">Step-By-Step</h4>
+        <ul>
+          <!-- active class is used to highlight the current step -->
+          <li class="active"><a href="s1overview.html">Overview</a></li>
+          <li><a href="s2tools.html">Tools & Software</a></li>
+          <li><a href="s5sketchup.html">Set Up SketchUp</a></li>
+          <li><a href="s4pepakura.html">Set Up Pepakura</a></li>
+          <li><a href="s5gimp.html">Set Up GIMP</a></li>
+          <li><a href="s7basics.html">SketchUp Basics</a></li>
+          <li><a href="s6design.html">Design Your Model</a></li>
+          <li><a href="s9exportsketch.html">Export from SketchUp</a></li>
+          <li><a href="s10unfold.html">Unfold in Pepakura</a></li>
+          <li><a href="s11export.html">Export as PDF</a></li>
+          <li><a href="s12decorate.html">Decorate in GIMP</a></li>
+          <li><a href="s14print.html">Print</a></li>
+          <li><a href="s15cut.html">Cut, Fold, Assemble</a></li>
+        </ul>
+    </div>
+
+    <!-- content area for step details -->
+    <div class="content-area">
+        <!-- gluten font used for section titles -->
+        <h1 class="gluten">OVERVIEW</h1>
+        <p class="info-text">
+            Want to create your own printable papercraft template? Whether it’s a unique idea you can’t find online or the joy of designing something yourself, this guide will help you make it happen!
+        </p>
+        <p class="info-text">
+            Use the <span class="roboto-black">Next</span> and <span class="roboto-black">Previous</span> buttons to explore each step in detail, or jump to specific sections using the menu.
+        </p>
+        <p class="info-text">
+            For a sneak peek at the entire process, check out this time-lapse video of me turning a digital design into a completed papercraft model.
+        </p>
+       
+        <!-- embedded youtube video -->
+        <iframe src="https://www.youtube.com/embed/3G1DJeSkYlY?si=vosBOCXE7avH8ntQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <p class="info-text">
+            lets get started and turn your creativity into reality!
+        </p>      
+
+        <!-- navigation buttons for moving to the next step -->
+        <div class="navigation-buttons text-end">
+            <button onclick="window.location.href = 's2tools.html';" class="button">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- footer-placeholder: dynamically loaded -->
+<div id="footer-placeholder"></div>
+
+<!-- bootstrap js bundle for interactivity -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="common.js"></script>
+</body>
+</html>

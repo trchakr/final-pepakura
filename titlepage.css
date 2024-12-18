@@ -1,0 +1,577 @@
+/* universal settings for height */
+body, html {
+    height: 100%;
+}
+
+/* navigation bar styling */
+nav {
+    background-color: rgba(172, 234, 255, 1); /* light blue background */
+}
+
+#navbar-placeholder {
+    position: fixed;
+    top: 0;
+    z-index: 1020; /* ensures nav stays on top */
+    width: 100%;
+}
+
+/* prevents wrapping of nav items */
+.navbar .nav-item {
+    white-space: nowrap;
+}
+
+/* individual nav link styling */
+.navbar .nav-link {
+    color: rgba(13, 108, 138, 1); /* default link color */
+    margin-right: 10px; /* space between links */
+}
+
+.nav-link.active {
+    text-decoration: underline; /* highlights active link */
+}
+
+.navbar .nav-link:hover {
+    color: rgb(7, 68, 87); /* darker shade on hover */
+    text-decoration: underline; 
+}
+
+/* reusable button styling */
+.button {
+    background-color: rgba(44, 147, 180, 1); /* light teal */
+    border: none;
+    border-radius: 8px;
+    font-family: "roboto";
+    font-weight: 300;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 2px 0px 2px;
+    opacity: 0.8; /* slightly transparent */
+    transition: 0.3s; /* smooth hover transition */
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 1; /* full opacity on hover */
+}
+
+/* general font styling */
+.roboto {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* scalable font size example */
+div.example {
+    font-size: clamp(30px, 4vw, 60px); /* adapts size based on screen width */
+}
+
+/* lighter font style */
+.roboto-light {
+    font-size: clamp(18px, 3vw, 30px); /* scales text size for responsiveness */
+    text-align: center;
+    font-weight: 300;
+    color: rgba(44, 147, 180, 1); /* matches button color */
+}
+
+/* margin adjustments for about sections */
+.about {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* background image setup */
+.bg {
+    background-image: url('images/untitled-1.png'); /* default image */
+    background-size: contain; /* maintains image proportions */
+    background-position: center; /* centers image */
+    background-repeat: no-repeat; /* prevents tiling */
+    height: 96vh; /* almost full viewport height */
+    width: 100%; /* full width of viewport */
+    position: relative; /* for child element positioning */
+    background-color: rgb(233, 249, 255); /* matches page theme */
+    margin-top: 88px; /* accounts for navbar height */
+}
+
+/* responsive adjustments for smaller screens */
+@media (max-width: 576px) { 
+    .bg {
+        background-image: url('images/untitled-2.png'); /* mobile-optimized image */
+        background-size: cover; /* ensures full coverage */
+    }
+}
+
+.jumbotron {
+    background-color: rgba(224, 247, 255, 1); /* subtle blue background for the jumbotron */
+    border-radius: 20px; /* rounded corners for a softer appearance */
+    margin-left: 20px; /* spacing on the left side */
+    margin-right: 20px; /* spacing on the right side */
+}
+
+/* styles the first direct child of .bg for centralized content */
+.bg > div {
+    text-align: center; /* centers the text inside the div */
+    padding: 0 50px; /* adds horizontal padding for readability */
+    width: 100%; /* spans full container width */
+    max-width: 1200px; /* prevents overly wide stretching on larger screens */
+}
+
+.bg img {
+    max-width: 100%; /* keeps the image responsive by restricting to container width */
+    height: auto; /* preserves the image's aspect ratio */
+}
+
+/* main section styling for showcasing papercraft info */
+.papercrafts-info {
+    background-color: rgb(223, 248, 255); /* light blue background to maintain theme */
+    padding: 2rem; /* internal spacing for better layout */
+    text-align: center; /* centers all text content */
+    height: 100vh; /* ensures the section takes up full screen height */
+    display: flex; /* enables flexible box layout for centering */
+    flex-direction: column; /* stacks items vertically */
+    justify-content: center; /* centers content vertically */
+    align-items: center; /* centers content horizontally */
+    width: 100%; /* spans full width of viewport */
+}
+
+/* adjusts papercrafts-info height for smaller screens */
+@media (max-width: 671px) {
+    .papercrafts-info {
+        height: 2000px; /* increases height for smaller devices */
+    }
+}
+
+/* adjusts papercrafts-info height for medium-sized screens */
+@media (min-width: 672px) {
+    .papercrafts-info {
+        height: 1000px; /* custom height for medium screens */
+    }
+}
+
+/* adjusts papercrafts-info height for larger screens */
+@media (min-width: 1000px) {
+    .papercrafts-info {
+        height: 96vh; /* nearly full screen height */
+        position: relative; /* enables child positioning within this section */
+    }
+}
+
+/* main section styling for about information */
+.about-info {
+    background-color: rgb(223, 248, 255); /* light blue background for consistency */
+    padding: 2rem; /* internal spacing for a balanced layout */
+    text-align: center; /* centers text content */
+    height: 100vh; /* ensures full-screen coverage */
+    display: flex; /* enables flexbox for centering */
+    flex-direction: column; /* stacks items vertically */
+    justify-content: center; /* vertically centers content */
+    align-items: center; /* horizontally centers content */
+    width: 100%; /* spans the entire width */
+    margin-top: 88px; /* adjusts position to align with the rest of the page */
+}
+
+/* adjusts about-info height for small screens */
+@media (max-width: 600px) {
+    .about-info {
+        height: 1000px; /* increases height for smaller devices */
+    }
+}
+
+/* adjusts about-info height for medium-sized screens */
+@media (min-width: 601px) {
+    .about-info {
+        height: 1100px; /* custom height for medium devices */
+    }
+}
+
+/* adjusts about-info height for larger screens */
+@media (min-width: 932px) {
+    .about-info {
+        height: 90vh; /* slightly less than full screen for balance */
+        position: relative; /* allows child positioning within this section */
+    }
+}
+
+/* adjusts about-info height for extra-large screens */
+@media (min-width: 1200px) {
+    .about-info {
+        height: 110vh; /* extra height to enhance spacing on larger screens */
+        position: relative;
+    }
+}
+
+
+.about-info {
+    background-color: rgb(223, 248, 255); /* light blue background for this section */
+    padding: 2rem; /* adds inner spacing */
+    text-align: center; /* centers all text */
+    height: 100vh; /* makes the section full screen height */
+    display: flex; /* flexbox layout */
+    flex-direction: column; /* stacks items vertically */
+    justify-content: center; /* centers items vertically */
+    align-items: center; /* centers items horizontally */
+    width: 100%; /* takes full width */
+    margin-top: 88px; /* space to prevent overlap with navbar */
+}
+
+@media (max-width: 600px) {
+    .about-info {
+        height: 1000px; /* increases height on smaller screens */
+    }
+}
+
+@media (min-width: 601px) {
+    .about-info {
+        height: 1100px; /* larger height for medium screens */
+    }
+}
+
+@media (min-width: 932px) {
+    .about-info {
+        height: 90vh; /* adjusts height for large screens */
+        position: relative; /* allows positioning adjustments */
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-info {
+        height: 110vh; /* extra height for very large screens */
+    }
+}
+
+.about-info2 {
+    background-color: rgb(223, 248, 255); /* same light blue as .about-info */
+    padding: 2rem; /* adds inner spacing */
+    text-align: center; /* centers all text */
+    height: 100vh; /* full screen height */
+    display: flex; /* flexbox layout */
+    flex-direction: column; /* stacks items vertically */
+    justify-content: center; /* centers items vertically */
+    align-items: center; /* centers items horizontally */
+    width: 100%; /* takes full width */
+}
+
+@media (max-width: 600px) {
+    .about-info2 {
+        height: 1000px; /* match height adjustment for small screens */
+    }
+}
+
+@media (min-width: 601px) {
+    .about-info2 {
+        height: 1100px; /* match medium screen height */
+    }
+}
+
+@media (min-width: 932px) {
+    .about-info2 {
+        height: 90vh; /* match large screen adjustment */
+        position: relative; /* allows positioning tweaks */
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-info2 {
+        height: 110vh; /* match very large screen height */
+    }
+}
+
+.info-container2 {
+    display: grid; /* grid layout for content */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* responsive grid with auto-adjusting columns */
+    gap: 0.5rem; /* space between grid items */
+    max-width: 1200px; /* cap max width */
+    width: 100%; /* spans full width */
+    margin: 0 auto; /* centers the grid */
+    flex-grow: 1; /* ensures it grows to fill available space */
+    text-align: center; /* centers all content */
+    padding: 30px; /* adds padding around the grid */
+}
+
+.info-text2 {
+    font-family: 'Roboto', sans-serif; /* clean and modern font */
+    font-size: 1.4rem; /* medium text size */
+    line-height: 1.5; /* improves readability */
+    color: rgba(13, 108, 138, 1); /* dark teal text */
+    padding: 1rem; /* inner spacing */
+    font-weight: 300; /* light font weight */
+    border-radius: 10px; /* smooth rounded edges */
+    background-color: rgba(168, 232, 253, 1); /* soft blue background */
+    max-width: 300px; /* keeps text blocks compact */
+}
+
+.info-text3 {
+    font-family: 'Roboto', sans-serif; /* same font as info-text2 */
+    font-size: 1rem; /* slightly smaller text size */
+    line-height: 1.5; /* maintains readability */
+    color: rgba(13, 108, 138, 1); /* same text color */
+    padding: 1rem; /* adds inner spacing */
+    font-weight: 300; /* keeps font light */
+    border-radius: 10px; /* smooth rounded edges */
+    background-color: rgba(168, 232, 253, 1); /* matches info-text2 */
+    max-width: 300px; /* consistent width with info-text2 */
+}
+
+.info-item2 {
+    display: flex; /* flex layout for alignment */
+    align-items: center; /* centers items vertically */
+    justify-content: center; /* centers items horizontally */
+}
+
+.info-image2 {
+    width: 85%; /* responsive image size */
+    max-width: 400px; /* caps image size */
+    height: auto; /* keeps aspect ratio */
+    border-radius: 10px; /* adds rounded corners */
+}
+
+.info-container {
+    display: grid; /* grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive columns */
+    gap: 0.5rem; /* space between grid items */
+    max-width: 1200px; /* limits grid size */
+    width: 100%; /* spans full width */
+    margin: 0 auto; /* centers the grid */
+    flex-grow: 1; /* grows to fill space */
+    text-align: center; /* centers all content */
+}
+
+.info-item {
+    display: flex; /* flexbox for alignment */
+    align-items: center; /* make sure items are centered vertically */
+    justify-content: center; /* center the items horizontally */
+}
+
+.info-image {
+    width: 85%; /* makes the image responsive to container */
+    height: auto; /* keeps image ratio intact */
+    border-radius: 10px; /* optional: just looks nicer with rounded corners */
+}
+
+.info-image2 {
+    width: 70%; /* smaller size for secondary images */
+    height: auto; /* keeps the ratio the same */
+    border-radius: 10px; /* rounded corners again */
+}
+
+.info-text {
+    font-family: 'Roboto', sans-serif; /* font styling */
+    font-size: 1.1rem; /* default size for text */
+    line-height: 1.5; /* makes text more readable */
+    color: rgba(13, 108, 138, 1); /* blue color for text */
+    padding: 1rem; /* padding inside the box */
+    font-weight: 400; /* normal weight */
+    border-radius: 10px; /* rounded edges for the box */
+    background-color: rgba(168, 232, 253, 1); /* light blue background */
+}
+
+.final-section {
+    background-color: rgb(223, 248, 255); /* light blue background */
+    padding: 2rem; /* some spacing inside */
+    text-align: center; /* center-align the text */
+    height: 100vh; /* make this take up the whole screen */
+    display: flex; /* flexbox again to center content */
+    flex-direction: column; /* stack items vertically */
+    justify-content: center; /* vertically center */
+    align-items: center; /* horizontally center */
+    box-sizing: border-box; /* padding doesn't mess with the width */
+    overflow: hidden; /* no overflow content */
+    width: 100%; /* make sure it stretches across */
+}
+
+.container {
+    max-width: 1200px; /* don't let it get too wide */
+    margin: 0 auto; /* center it */
+    text-align: center; /* center the text */
+    width: 100%; /* make sure it fills the space */
+}
+
+/* light blue box styling */
+.blue-box {
+    background-color: rgba(168, 232, 253, 1); /* a bit darker blue than the bg */
+    border-radius: 15px; /* rounded corners */
+    padding: 2rem; /* padding inside the box */
+    display: flex; /* flexbox for centering content */
+    justify-content: center; /* center the content */
+    align-items: center; /* center items inside */
+    flex-wrap: wrap; /* wrap for smaller screens */
+    max-width: 900px; /* limit the max width */
+    margin: 0 auto; /* center the box */
+    margin-top: 20px; /* space on top */
+}
+
+/* content wrapper */
+.content-wrapper {
+    display: flex; /* flexbox for alignment */
+    align-items: center; /* vertically center */
+    justify-content: center; /* horizontally center */
+    gap: 1.5rem; /* space between items */
+    max-width: 900px; /* limit content width */
+    margin: 0 auto; /* center the content */
+    flex-wrap: wrap; /* wrap on smaller screens */
+    text-align: center; /* center the text */
+}
+
+/* icon styling */
+.left-icon img, .right-icon img {
+    height: auto; /* make sure they scale right */
+    width: 15vw; /* responsive based on viewport */
+    max-width: 150px; /* don't let icons get too big */
+}
+
+/* text content */
+.text-content {
+    flex: 1; /* takes remaining space */
+    text-align: center; /* center the text */
+    max-width: 300px; /* narrow text box */
+    margin: 0 auto; /* center the content */
+}
+
+.ready-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(13, 108, 138, 1);
+    margin-bottom: 1rem; /* space under the title */
+}
+
+.text-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(13, 108, 138, 1);
+    margin-bottom: 1.5rem; /* space after paragraphs */
+}
+
+/* section title stuff - keeping it simple */
+.section-title {
+    margin-bottom: 1.4rem; /* space below the title */
+    max-width: 900px;
+    margin: 0 auto; /* centering the title */
+}
+
+.gluten {
+    font-family: "Gluten", cursive;
+    color: rgba(13, 108, 138, 1);
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: clamp(2.3rem, 4vw, 5.5rem); /* font size changes with screen */
+    line-height: 1.2;
+}
+
+.gluten2 {
+    font-family: "Gluten", cursive;
+    color: rgba(92, 214, 255, 1);
+    font-size: 30px !important; /* forced large size */
+    font-weight: 350;
+}
+
+.gluten3 {
+    font-family: "Gluten", cursive;
+    color: rgba(13, 108, 138, 1);
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: clamp(3rem, 5vw, 8rem); /* font size gets bigger with more space */
+    line-height: 1.2;
+}
+
+.roboto2 {
+    font-family: "Roboto", cursive;
+    color: rgba(13, 108, 138, 1);
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: clamp(2rem, 3vw, 4rem); /* adjust size based on screen size */
+    line-height: 1.2;
+}
+
+footer {
+    background-color: rgba(31, 106, 130, 1); /* dark blue footer */
+    color: rgba(195, 241, 255, 1); /* light blue text */
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    padding: 30px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* allows wrapping */
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: left; /* default alignment for small screens */
+    margin-left: 20px;
+}
+
+.footer-logo {
+    width: 300px; /* adjusts logo size */
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    margin-top: 10px;
+    line-height: 1.6; /* spacing for readability */
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px; /* spacing below headers */
+}
+
+/* padding adjustments for different footer columns */
+.footer-column:nth-child(2) {
+    padding-top: 50px; /* extra space at the top */
+}
+
+.footer-column:nth-child(1) {
+    padding-top: 30px; /* extra space at the top */
+    padding-right: 70px; /* space on the right */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0; /* space between list items */
+}
+
+.footer-column ul li a {
+    color: #add8e6; /* light blue links */
+    text-decoration: none; /* no underline by default */
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline; /* underline on hover */
+}
+
+.footer-logo-icon {
+    width: 250px; /* adjust logo icon size */
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    text-align: left;
+    margin-top: 20px;
+    border-top: 1px solid rgba(195, 241, 255, 1);
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* stack items in smaller screens */
+        align-items: left;
+        text-align: left; /* align text to the left on mobile */
+    }
+}

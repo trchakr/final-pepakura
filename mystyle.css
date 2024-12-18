@@ -1,0 +1,413 @@
+/* body layout for the entire page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* navbar styling, light blue vibes */
+nav {
+    background-color: rgba(172, 234, 255, 1);
+}
+
+/* navbar items, keep the links neat and unwrapped */
+.navbar .nav-item {
+    white-space: nowrap; /* no wrapping please */
+}
+.navbar .nav-link {
+    color: rgba(13, 108, 138, 1); /* the link color */
+    margin-right: 10px; /* space between links */
+    
+}
+
+#navbar-placeholder {
+    position: fixed;
+    top: 0;
+    z-index:1020;
+    width:100%;
+}
+
+/* show the current active page */
+.nav-link.active {
+    text-decoration: underline; 
+}
+
+/* hover effect for links */
+.navbar .nav-link:hover {
+    color: rgb(7, 68, 87); 
+    text-decoration: underline; 
+}
+
+/* scalable font size example */
+div.example {
+    font-size: clamp(30px, 4vw, 60px);
+}
+
+/* roboto light font, for headers or something */
+.roboto-light {
+    font-size: clamp(18px, 3vw, 30px);
+    text-align: center;
+    font-weight: 300;
+    color: rgba(44, 147, 180, 1);
+}
+/* roboto regular */
+.roboto {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* roboto black variant */
+.roboto-black {
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* main layout for the sidebar and content area */
+.main-content {
+    display: flex; 
+    flex-direction: row; /* horizontal layout */
+    padding-top: 88px; /* makes room for sticky navbar */
+    min-height: 100vh;
+}
+
+/* sidebar styles, sticky and scrollable */
+.sidebar {
+    background-color: rgb(214, 245, 255); 
+    padding: 20px;
+    width: 25%;
+    position: sticky;
+    top: 0;
+    height: 100vh; 
+    overflow-y: auto; 
+    z-index: 1000; 
+}
+/* sidebar step header */
+.stepbystep {
+    font-family: Roboto;
+    font-size: 150%;
+    color: rgba(13, 108, 138, 1);
+    font-weight: 400;
+}
+.sidebar ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+/* each list item in the sidebar */
+.sidebar ul li {
+    padding: 10px;
+    background-color: rgb(214, 245, 255);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.sidebar ul li:hover {
+    background-color: rgb(195, 241, 255); 
+}
+
+/* links inside sidebar */
+.sidebar ul li a {
+    color: rgba(13, 108, 138, 1);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+/* active page in the sidebar */
+.sidebar ul li.active {
+    background-color: rgba(168, 232, 253, 1); 
+}
+.sidebar ul li.active a {
+    text-decoration: none; 
+}
+
+/* content area takes up remaining space */
+.content-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; 
+    margin-left: 10px; 
+}
+
+/* nav dropdown for mobile */
+.mobile-nav .dropdown-menu {
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: rgba(224, 247, 255, 1); 
+}
+
+/* mobile nav buttons */
+.mobile-nav .btn-secondary {
+    background-color: #1985A1;
+    border: none;
+    width: calc(100% - 30px); 
+    text-align: left;
+    padding: 15px 25px;
+    margin: 0px 15px;
+    margin-top: 100px;
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* hide sidebar */
+    }
+    .main-content {
+        flex-direction: column; /* stack layout */
+    }
+    .content-area {
+        width: 100%; /* full width */
+    }
+    .mobile-nav {
+        display: block !important;
+    }
+}
+
+
+/* the gluten font styles for the title headers */
+.gluten {
+    font-family: "Gluten", cursive;
+    font-size: 50px !important; /* larger for emphasis */
+    color: rgba(13, 108, 138, 1);
+}
+
+/* main text styling for paragraphs */
+.info-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: rgba(13, 108, 138, 1);
+    font-weight: 300;
+    text-align: left;
+}
+
+/* headers for sub-sections */
+.info-header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(13, 108, 138, 1);
+    font-weight: 400;
+}
+
+/* gluten2 is for the smaller headers with a different color */
+.gluten2 {
+    font-family: "Gluten", cursive;
+    color: rgba(92, 214, 255, 1); 
+    font-size: 30px !important;
+    font-weight: 350;
+}
+
+/* button styles */
+.button {
+    background-color: rgb(25, 142, 181);
+    border: none;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 2px 0px 2px;
+    opacity: 0.9;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* hover effect for buttons */
+.button:hover {
+    opacity: 1;
+}
+
+/* variation for another button */
+.button1 {
+    background-color: rgb(27, 72, 88); 
+    border: none;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 2px 0px 2px;
+    opacity: 0.9;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button1:hover {
+    opacity: 1;
+}
+
+/* iframe styling for embedded videos */
+iframe {
+    width: 100%; 
+    max-width: 44vw;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+    margin: 0;
+    min-width: 400px;
+}
+
+/* image responsiveness */
+.info-img {
+    width: 50vw;
+    min-width: 350px;
+    max-width: 700px; 
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* tools section layout */
+.tools-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    max-width: 500px;
+}
+
+.tools-logos img {
+    width: 20vw;
+    max-width: 150px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* footer styles */
+footer {
+    background-color: rgba(31, 106, 130, 1);
+    color: rgba(195, 241, 255, 1);
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    padding: 30px 40px;
+}
+
+/* footer layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+/* individual footer columns */
+.footer-column {
+    flex: 1;
+    text-align: left; 
+    margin-left: 20px;
+}
+
+/* footer logo styling */
+.footer-logo {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+/* footer links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li a {
+    color: #C3F1FF; 
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline; 
+}
+
+/* responsive footer changes for smaller screens */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* footer logo styling for branding */
+.footer-logo {
+    width: 300px; /* Adjusted for consistent scaling */
+    margin-bottom: 10px;
+}
+
+/* paragraph spacing within footer columns */
+.footer-column p {
+    margin-top: 10px;
+    line-height: 1.6; /* Better readability */
+}
+
+/* header styling for sections in the footer */
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px; /* Adds spacing between header and content */
+}
+
+/* specific padding adjustments for layout symmetry */
+.footer-column:nth-child(2) {
+    padding-top: 50px; 
+}
+
+.footer-column:nth-child(1) {
+    padding-top: 30px; 
+    padding-right: 70px;
+}
+
+/* list styles for footer links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0; /* Adds vertical spacing between list items */
+}
+
+/* link styles for footer, emphasizing light blue */
+.footer-column ul li a {
+    color: #C3F1FF;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline; /* Indication for interactivity */
+}
+
+/* alternative footer logo style for flexibility */
+.footer-logo-icon {
+    width: 250px; 
+    margin: 0 auto; /* Centers the logo */
+}
+
+/* bottom section of the footer for additional info */
+.footer-bottom {
+    text-align: left;
+    margin-top: 20px;
+    border-top: 1px solid rgba(195, 241, 255, 1); 
+    padding-top: 10px;
+    font-size: 0.9rem; /* Smaller text for subtle details */
+}
+
+/* responsive layout adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stacks footer columns */
+        align-items: flex-start; 
+        text-align: left; 
+    }
+
+    .main-content {
+        padding-top: 0; /* Removes extra spacing at the top */
+    }
+}
